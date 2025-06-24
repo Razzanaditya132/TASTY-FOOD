@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\InformasiKontak;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
+use App\Mail\KontakMasukMail; // ✅ Import Mailable
 
 class InformasiKontakController extends Controller
 {
@@ -20,7 +21,7 @@ class InformasiKontakController extends Controller
     public function store(Request $request)
     {
         // Validasi input
-        $request->validate([
+        $validated = $request->validate([
             'subject' => 'required|max:255',
             'name' => 'required|max:100',
             'email' => 'required|email',
@@ -28,32 +29,22 @@ class InformasiKontakController extends Controller
         ]);
 
         // Simpan ke database
-        $data = InformasiKontak::create([
-            'subject' => $request->subject,
-            'name' => $request->name,
-            'email' => $request->email,
-            'message' => $request->message,
-        ]);
+        $kontak = InformasiKontak::create($validated);
 
         // Kirim email ke admin
-        Mail::raw("
-Subject: {$data->subject}
-Name: {$data->name}
-Email: {$data->email}
-Message: {$data->message}
-        ", function ($message) {
-            $message->to('razzanadityapangestu@gmail.com')
-                ->subject('Pesan Baru dari Form Kontak');
-        });
+        Mail::to('razzanadityapangestu@gmail.com')->send(new KontakMasukMail($validated));
 
         return redirect()->back()->with('success', 'Pesan berhasil dikirim!');
     }
+
+    // Detail pesan masuk
     public function show($id)
     {
         $kontak = InformasiKontak::findOrFail($id);
         return view('informasikontak.detail', compact('kontak'));
     }
 
+    // Hapus pesan
     public function destroy($id)
     {
         $kontak = InformasiKontak::findOrFail($id);

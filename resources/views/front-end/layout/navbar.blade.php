@@ -46,11 +46,11 @@
 
     <!-- Desktop Nav -->
     <ul class="hidden md:flex gap-8 text-sm font-semibold uppercase">
-        <li><a href="{{ url('/homekami') }}" class="hover:text-yellow-400">Home</a></li>
-        <li><a href="{{ url('/tentangkami') }}" class="hover:text-yellow-400">Tentang</a></li>
+        <li><a href="{{ url('/home-kami') }}" class="hover:text-yellow-400">Home</a></li>
+        <li><a href="{{ url('/tentang-kami') }}" class="hover:text-yellow-400">Tentang</a></li>
         <li><a href="{{ url('/berita-kami') }}" class="hover:text-yellow-400">Berita</a></li>
-        <li><a href="{{ url('/galerikami') }}" class="hover:text-yellow-400">Galeri</a></li>
-        <li><a href="{{ url('/kotakami') }}" class="hover:text-yellow-400">Kontak</a></li>
+        <li><a href="{{ url('/galeri-kami') }}" class="hover:text-yellow-400">Galeri</a></li>
+        <li><a href="{{ url('/kontak-kami') }}" class="hover:text-yellow-400">Kontak</a></li>
     </ul>
 
     <!-- Hamburger -->
@@ -76,11 +76,11 @@
                     <span class="text-xl font-bold">MENU</span>
                     <button id="closeBtn" class="text-3xl">&times;</button>
                 </div>
-                <a href="{{ url('/homekami') }}">Home</a>
-                <a href="{{ url('/tentangkami') }}">Tentang</a>
+                <a href="{{ url('/home-kami') }}">Home</a>
+                <a href="{{ url('/tentang-kami') }}">Tentang</a>
                 <a href="{{ url('/berita-kami') }}">Berita</a>
-                <a href="{{ url('/galerikami') }}">Galeri</a>
-                <a href="{{ url('/kobtakkami') }}">Kontak</a>
+                <a href="{{ url('/galeri-kami') }}">Galeri</a>
+                <a href="{{ url('/kontak-kami') }}">Kontak</a>
             </div>
         `;
 

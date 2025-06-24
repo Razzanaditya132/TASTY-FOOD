@@ -9,22 +9,14 @@ class DatabaseSeeder extends Seeder
 {
     public function run(): void
     {
-        // Panggil dulu role seeder
-        $this->call([
-            RoleSeeder::class,
-        ]);
-
-        // Baru buat user
-        User::factory()->create([
-            'name' => 'Test User',
-            'email' => 'test@example.com',
-            'role_id' => 1,
-        ]);
-
         // Seeder lainnya
         $this->call([
-            GaleriSeeder::class,
-            GridGaleriSeeder::class,
+            RolesTableSeeder::class,
+            UsersTableSedeer::class,
+            GaleriTableSeeder::class,
+            GridGaleriTableSeeder::class,
+            InformasiKontakTableSeeder::class,
+            TentangKamiTableSeeder::class,
         ]);
     }
 }

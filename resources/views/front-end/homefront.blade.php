@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="overflow-x-hidden">
 
 <head>
     <meta charset="UTF-8">
@@ -8,11 +8,11 @@
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="m-0 font-sans bg-gray-200 text-gray-800">
+<body class="m-0 font-sans bg-gray-200 text-gray-800 overflow-x-hidden">
     <!-- Navbar -->
     <nav class="px-6 py-5 mt-1 md:px-16 shadow relative bg-gray-100">
         <div class="flex justify-between items-center">
-            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold relative md:top-9">TASTY FOOD</h1>
+            <h1 class="text-xl md:text-2xl lg:text-3xl font-bold relative md:top-14">TASTY FOOD</h1>
             <!-- Mobile Toggle Button -->
             <button class="md:hidden block text-2xl focus:outline-none" id="navbar-toggle">
                 ☰
@@ -27,7 +27,7 @@
             </li>
             <li><a href="{{route('berita.front')}}" class="block px-4 py-2 text-black font-medium">BERITA</a></li>
             <li><a href="{{route('galeri.front')}}" class="block px-4 py-2 text-black font-medium">GALERI</a></li>
-            <li><a href="{{ url('/kontakkami') }}" class="block px-4 py-2 text-black font-medium">KONTAK</a></li>
+            <li><a href="{{ url('/kontak-kami') }}" class="block px-4 py-2 text-black font-medium">KONTAK</a></li>
             </ul>
     </nav>
 

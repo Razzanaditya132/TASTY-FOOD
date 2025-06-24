@@ -51,23 +51,23 @@ Route::resource('kontak', InformasiKontakController::class);
 //khusus halaman front-end
 
 //halaman galeri
-Route::get('/galerikami', [GaleriController::class, 'galerifront'])->name('galeri.front');
+Route::get('/galeri-kami', [GaleriController::class, 'galerifront'])->name('galeri.front');
 
 //halaman berita
 Route::get('/berita-kami', [BeritaController::class, 'beritafront'])->name('berita.front');
 Route::get('/berita/{id}', [BeritaController::class, 'show'])->name('berita.show');
 
 //halaman kontak
-Route::get('/kontakkami', function () {
+Route::get('/kontak-kami', function () {
     return view('front-end.kontakfront');
 })->name('kontak.front');
 Route::post('/kontak/kirim', [InformasiKontakController::class, 'store'])->name('kontak.store');
 
 //halaman tentang kami
-Route::get('/tentangkami', [TentangKamiController::class, 'front'])->name('tentangkamifront');
+Route::get('/tentang-kami', [TentangKamiController::class, 'front'])->name('tentangkamifront');
 
 //halaman home
-Route::get('/homekami', function () {
+Route::get('/home-kami', function () {
     $beritas = Berita::latest()->get();
     $grid_galeris = GridGaleri::latest()->take(12)->get(); // ambil 12 gambar pertama
 
@@ -75,4 +75,4 @@ Route::get('/homekami', function () {
 })->name('homefront');
 
 //halaman show berita kami
-Route::get('/beritakami/{id}', [App\Http\Controllers\ShowBeritaKami::class, 'show'])->name('beritakami.show');
+Route::get('/berita-kami/{id}', [App\Http\Controllers\ShowBeritaKami::class, 'show'])->name('beritakami.show');

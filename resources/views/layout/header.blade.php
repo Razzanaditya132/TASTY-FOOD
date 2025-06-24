@@ -89,7 +89,7 @@
 
                     @if(punya_akses('akses_kontak'))
                         <li class="nav-item">
-                            <a class="nav-link" href="{{ url('/informasi-kontak') }}">
+                            <a class="nav-link" href="{{ url('kontak') }}">
                                 <i class="icon-grid menu-icon"></i>
                                 <span class="menu-title">Informasi Kontak</span>
                             </a>

@@ -15,7 +15,7 @@
     <label><input type="checkbox" name="akses_tentang"> Akses Tentang Kami</label><br>
     <label><input type="checkbox" name="akses_berita"> Akses Berita</label><br>
     <label><input type="checkbox" name="akses_roles"> Akses roles</label><br>
-    <label><input type="checkbox" name="akses_berita"> Akses user</label><br>
+    <label><input type="checkbox" name="akses_user"> Akses user</label><br>
 
     <button type="submit">Simpan</button>
 </form>

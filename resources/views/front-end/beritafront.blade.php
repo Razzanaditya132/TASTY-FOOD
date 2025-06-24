@@ -55,7 +55,7 @@
                 <div>
                     <h2 class="text-3xl font-bold mb-4">{{ $beritas[0]->judul }}</h2>
                     <p class="text-gray-700 mb-6">{{ \Illuminate\Support\Str::limit($beritas[0]->isi, 300) }}</p>
-                    <a href="{{ route('berita.show', $beritas[0]->id) }}"
+                    <a href="{{ route('beritakami.show', $beritas[0]->id) }}"
                         class="bg-black text-white px-6 py-2 rounded hover:bg-gray-800 transition">Baca Selengkapnya</a>
                 </div>
             </div>
@@ -71,7 +71,7 @@
                         <p class="text-sm text-gray-700 flex-grow">
                             {{ \Illuminate\Support\Str::limit($berita->isi, 100) }}
                         </p>
-                        <a href="{{ route('berita.show', $berita->id) }}"
+                        <a href="{{ route('beritakami.show', $berita->id) }}"
                             class="mt-4 text-sm text-yellow-500 font-semibold hover:underline">Baca selengkapnya</a>
                     </div>
                 @endforeach
